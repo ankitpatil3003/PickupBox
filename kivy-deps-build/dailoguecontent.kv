@@ -1,0 +1,21 @@
+#:kivy 2.1.0
+<DialogContent>:
+    size_hint: None, None
+    size: "300dp", "400dp"
+    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+    MDTextField:
+        id: name_input
+        hint_text: "Product Name"
+        size_hint_x: None
+        width: "280dp"
+        pos_hint: {"center_x":  0.5}
+    
+    MDRaisedButton:
+        id: menu_
+        text: "category"
+        size_hint: None, None
+        width: "280dp"
+        height: "48dp"
+        pos_hint: {"center_x": 0.5}
+        on_release: root.open_category_menu()

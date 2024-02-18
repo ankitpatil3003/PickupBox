@@ -1,0 +1,13 @@
+#:kivy 2.1.0
+#: import MapView kivy_garden.mapview.MapView
+
+<ProductsMapView>:
+    lat: 42.09
+    lon: -75.91
+    zoom: 15
+    on_zoom:
+        self.zoom = 10 if self.zoom < 10 else self.zoom
+    on_lat:
+        self.start_getting_products_in_fov()
+    on_lon:
+        self.start_getting_products_in_fov()
